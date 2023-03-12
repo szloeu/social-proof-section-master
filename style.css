@@ -1,0 +1,218 @@
+:root {
+	font-size: 16px; 
+	/*This sets the font-size all over the document. Default: 16px;
+	You can set all other value relative to this value. I mean, this is the easiest way to 
+	changing a whole complex object with changing one value. See bottom the @media block.*/
+}
+
+body, html { 
+    margin: 0;
+    padding: 0;
+    /* Must both parameters set when vertical scrollbar appears with min-height: 100vh. */
+}
+
+body {
+	background-color: hsl(0, 0%, 100%)
+	
+}
+
+html {
+	font-family: 'League Spartan', sans-serif;
+	font-size: 0.9375rem;
+}
+
+main {
+	margin: 0;
+    padding: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	align-items: center;
+	background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+	background-position: left top, right bottom;
+	background-repeat: no-repeat, no-repeat;
+}
+
+#div-upper {
+	display: flex;
+	flex-direction: row;
+	margin: 2rem 7.5rem 0;
+	height: 50%;
+}
+
+#div-upper-left {
+	width: 50%;
+}
+
+
+
+h1 {
+	font-weight: 700;
+	font-size: 3rem;
+	color: hsl(300, 43%, 22%);
+	width: 20rem;
+}
+
+#div-upper-left p {
+	color: hsl(303, 10%, 53%);
+	width: 75%;
+	line-height: 150%;
+}
+
+#div-upper-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 50%;
+}
+
+#div-upper-right-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 16rem;
+}
+
+#div-upper-right-top, #div-upper-right-middle, #div-upper-right-bottom {
+	width: 24rem;
+	height: 3.5rem;
+	background-color: hsl(300, 24%, 96%);
+	border-radius: 0.4375rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 0.5rem;
+	font-weight: 700;
+	color: color: hsl(303, 10%, 53%);
+}
+
+#div-upper-right-middle {
+	margin-left: 3.5rem;
+}
+
+#div-upper-right-bottom {
+	margin-left: 7rem;
+}
+
+#div-lower {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin: 0 4rem;
+}
+
+#div-lower-left-inner, #div-lower-middle-inner, #div-lower-right-inner {
+	width: 20rem;
+	height: 13.9rem;
+	background-color: hsl(300, 43%, 22%);
+	border-radius: 0.375rem;
+	color: hsl(300, 24%, 96%);
+}
+
+#div-lower-middle-inner {
+	margin: 0 1rem;
+}
+
+#div-lower-left-inner-head, #div-lower-middle-inner-head, #div-lower-right-inner-head {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#div-lower img {
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 1.25rem;
+	margin: 2rem 0 2rem 2rem;
+}
+
+#div-lower span {
+	color: hsl(333, 80%, 67%);
+}
+
+#div-lower p {
+	margin: 0 2rem;
+	line-height: 150%;
+	font-size: 0.9rem;
+}
+
+#div-lower-middle-outer {
+	margin: 1rem 0 0 0;
+}
+
+#div-lower-right-outer {
+	margin: 2rem 0 0 0;
+}
+
+@media (max-width: 1000px) {
+
+	main {
+		width: 100%;
+		background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+		background-position: left top, right bottom;
+		background-repeat: no-repeat, no-repeat;
+	}
+
+	#div-upper {
+		flex-direction: column;
+		height: 100%;
+		width: 21rem;
+		margin: 2rem;
+	}
+
+	#div-upper-left {
+		width: 100%;
+	}
+
+	#div-upper-left h1 {
+		text-align: center;
+		width: 100%;
+	}
+
+	#div-upper-left p {
+		width: 21rem;
+		text-align: center;
+	}
+
+	#div-upper-right {
+		width: 100%;
+	}
+
+	#div-upper-right p {
+		margin: 0;
+	}
+
+	#div-lower {
+		flex-direction: column;
+	}
+
+	#div-upper-right-top {
+		margin-left: 0;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	#div-upper-right-middle {
+		margin-left: 0;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	#div-upper-right-bottom {
+		margin-left: 0;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	#div-lower-right-outer {
+    	margin: 1rem 0 0 0;
+	}
+
+	#div-lower-middle-inner {
+	margin: 0;
+}
+}
